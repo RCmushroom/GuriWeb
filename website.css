@@ -1,5 +1,5 @@
 :root {
-  --bg: rgb(45, 63, 43);
+  /* --bg: rgb(45, 63, 43); */
 }
 
 /* = 1rem */
@@ -13,38 +13,73 @@ html {
   box-sizing: border-box;
 }
 
-/* 재료 */
+/* ----- 재료 ----- */
+
+/* 레이아웃 맞춤용 */
 .inner {
-  margin: 0, 100%;
-  padding: 0, 3rem;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* header */
 .header {
   width: 100%;
-  height: 4.5rem;
-  background-color: var(--bg);
+  height: 5rem;
+  background-color: green;
   position: fixed;
   z-index: 1;
 }
 
 /* header/header-main */
 .header-main {
-  width: 1300px;
-  height: 4.5rem;
+  width: 100rem;
+  height: 5rem;
   background-color: bisque;
   margin: 0 auto;
 }
 
 /* section */
 .section {
+  width: 100%;
+  padding-top: 4.5rem;
+  background-color: blue;
+}
+
+/* section 내 block 클래스*/
+.section > .block {
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 100rem;
 }
 
 /* section/main_title_block */
 .main_title_block {
-  width: 100%;
   height: 50rem;
-  margin-top: 4.5rem;
   background-color: skyblue;
-  position: absolute;
+  position: relative;
+}
+
+/* section/block_1 */
+.block_1 {
+  height: 50rem;
+  background-color: rgb(16, 185, 59);
+}
+
+/* section/block_2 */
+.block_2 {
+  height: 50rem;
+  background-color: coral;
+}
+
+/* section/block_3 */
+.section > .block.block_3 {
+  height: 50rem;
+  background-color: sienna;
+  margin-bottom: 0;
+}
+
+/* footer */
+.footer {
+  height: 14rem;
+  background-color: chartreuse;
 }
