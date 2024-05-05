@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 블럭형식 태그
+    =>기본 삽입되어 있는 여백값 있음
+    =>기본 삽입 여백은 초기화로 제거가 가능
+    */
+    /* 전체선택자(*) 사용으로 블럭형식 태그의 여백을 초기화함 */
+*{
+margin: 0;
+padding: 0;
+}
+/* =>1 전체 블럭형식의 여백 초기화 
+=> 레이아웃 작업시 필수 삽입     */
+/* p{
+      background-color: aqua;
+    }
+    h1{
+      background-color: lawngreen;
+    }
+    div{
+      background-color: blueviolet;
+    } */
+    .wrap{
+      width: 100%;
+      /* =>부모의 전체 크기값에 맞춤 */
+      height: 400vh;
+      /* =>100vh*4 page의 부모임 */
+      background-color: lavender;
+    }
+    .page{
+      width: 100%;
+      height: 100vh;
+      /* =>윈도우의 높이값 */
+      padding-top: 150px;
+      box-sizing: border-box;
+    }
+    .page_1{
+      background-color: lightblue;
+     
+    }
+    .page_2{
+      background-color: lightcoral;
+    }
+    .page_3{
+      background-color:lightseagreen;
+    }
+    .page_4{
+      background-color:violet;
+      position: relative;
+    }
+    .main_header{
+      width: 1680px;
+      height: 80px;
+      background-color: darkblue;
+      position: fixed;
+      /* =>position값 지정시 
+      상대값 형식으로 auto 사용 안됨 */
+      top:50px;
+      left:50%;
+      /* =>부모 영역의 중간지점
+      =>객체의 왼쪽 상단의 위치임 */
+      margin-left: -840px;
+      /* =>가로 부모영역의 중앙 50% 지정
+      =>margin-left:- 객체의 가로크기/2 */
+      z-index: 999999;
+    }
+    .page_title{
+      /* width: 100%;
+      =>텍스트만 있는 객체일경우
+      =>가로 크기값 설정시 부모영역에 100%로 맞춤처리후
+      =>텍스트 가로 ,세로 정렬로 위치 설정함 */
+      width: 300px;
+      height: 100px;
+      background-color: slategray;
+      margin: 0 auto;
+    }
+    .page_text_1{
+      width: 1200px;
+      height: 200px;
+      background-color: darkred;
+      margin: 150px auto;
+    }
+    .samdasoo_img{
+      width: 250px;
+      height: 600px;
+      background-color: black;
+      position: fixed;
+      left:calc(50% - 125px);
+      /* 1920-250/2=835 */
+      top:300px;
+    }
+    .page_text_2{
+      width: 1200px;
+      height: 200px;
+      background-color:hotpink;
+      margin: 150px auto;
+      position: relative;
+      /* =>상대값으로 지정된 위치,여백을 모두 인식한 다음
+      현재의 위치에서 왼쪽 상단을 0,0 기준함 */
+      z-index: 9;
+      top:-100px;
+      /* =>해당 위치쪽으로 가는 방향임 */
+    }
+/* .but{
+  width: 150px;
+  height: 50px;
+  background-color: yellow;
+  margin: -100px auto;
+} */
+.left_con{
+  width: 300px;
+  height: 200px;
+  background-color: seagreen;
+  margin-left: -840px;
+}
+.right_con{
+  width: 600px;
+  height: 200px;
+  background-color: blue;
+  margin-left: 240px;
+}
+.left_con,.right_con{
+  position: absolute;
+  /* =>부모의 왼쪽 상단을 기준으로 0,0 위치설정 */
+  /* =>body의 자식일 경우 position: absolute 사용시
+  부모에게 position 값 필요 없음 */
+
+  /* body태그의 자식일 경우를 제외하고
+  나머지 부모의 자식일 경우 
+  position: absolute 사용시 부모객체에게 position 속성이 
+  설정되어야함
+  =>position 집안에서  position: absolute난다*/
+  /* top:0; */
+  left: 50%;
+  bottom: 100px;
+ 
+}
+
+  </style>
+</head>
+<body>
+ <div class="wrap">
+    <div class="page page_1">
+      <div class="main_header"></div>
+      <div class="page_title"></div>
+      <div class="page_text_1"></div>
+      <div class="samdasoo_img"></div>
+      <div class="page_text_2"></div>
+    </div>
+    <div class="page page_2">
+      <div class="page_title"></div>
+      <div class="page_text_1"></div>
+      <div class="page_text_2"></div>
+      <!-- <div class="but"></div> -->
+    </div>
+    <div class="page page_3">
+      <div class="page_title"></div>
+      <div class="page_text_1"></div>
+      <div class="page_text_2"></div>
+    </div>
+    <div class="page page_4">
+      <div class="page_title"></div>
+      <div class="left_con"></div>
+      <div class="right_con"></div>
+    </div>
+ </div>
+ <!-- <p>텍스트</p>
+ <p>텍스트</p>
+ <h1>텍스트</h1>
+ <h1>텍스트</h1>
+ <div>텍스트</div>
+ <div>텍스트</div> -->
+</body>
+</html>

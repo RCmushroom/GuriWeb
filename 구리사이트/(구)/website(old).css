@@ -1,0 +1,100 @@
+/* 전지전능 그자체 */
+
+* {
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+/* 군주들 */
+
+.main_header,
+.main_contents,
+.main_banner {
+  width: 100%;
+  padding: 10px;
+}
+
+/* main_header 군주 */
+
+.main_header {
+  background-color: blue;
+  height: 72px;
+  box-sizing: border-box;
+  position: fixed;
+  border-bottom: 2px solid black;
+  left: 0;
+  top: 0;
+}
+
+/* main_header 소속 군단장 */
+
+.main_logo {
+  background-color: aquamarine;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-left: calc((100% / 2) - 25px);
+}
+
+.menu_btn {
+  background-color: brown;
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+
+/* main_contents 군주*/
+
+.main_contents {
+  background-color: aquamarine;
+  height: 3000px;
+  box-sizing: border-box;
+  margin-top: 70px;
+}
+
+/* 모든 box 태그 소속 */
+
+.box {
+  width: 500px;
+  height: 500px;
+  box-sizing: border-box;
+  position: absolute;
+  margin: 50px;
+}
+
+/* main_contents 소속 */
+/* 박스1 위에가 뭔가 안맞음 */
+
+.box_1 {
+  width: calc(100% - 20px);
+  height: 100px;
+  background-color: chocolate;
+
+  /* margin-bottom: 100px; */
+}
+
+.box_2 {
+  background-color: slategray;
+}
+
+.box_3 {
+  background-color: salmon;
+}
+
+/* main_banner 군주 */
+
+.main_banner {
+  background-color: yellow;
+  height: 140px;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+/* z축 레이어 1 */
+
+.z_layer_1 {
+  z-index: 1;
+}

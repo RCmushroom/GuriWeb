@@ -1,0 +1,161 @@
+/* 해상도에 따라 css를 구분할때 사용하는 조건문
+=>미디어쿼리 */
+/* @media 기기종류 and (max-width:해상도값) and (min-width:해상도값){
+  조건이 참일때만 실행되는 영역
+  선택자{
+    속성:속성값;
+  }
+} */
+@media all and (min-width:1280px){
+
+  .main_header{
+    width: 100%;
+    height: 200px;
+  }
+  .wrap{
+    width: 100%;
+    overflow: hidden;
+    /* =>자식영역에 부모의 높이값 맞춤
+    =>자식요소의 크기를 계산 할 수 없을때  */
+  }
+  .main_footer{
+    width: 100%;
+    height: 450px;
+  }
+  .right_fixed_menu{
+    width: 40px;
+    height: 240px;
+    position: fixed;
+    right: 0;
+    /* =>화면의 크기값이 변경이 되면 위치가 변경됨 */
+    top:calc(50% - 120px);
+  }
+  .top_but_wrap{
+    width: 70px;
+    height: 120px;
+    position: fixed;
+    bottom: 80px;
+    left:calc(50% + 650px);
+    /* =>중심에서 위치를 설정했을때는 화면의 크기와 상관없이
+    고정형태를 유지함 */
+  }
+  .main_banner{
+    width: 100%;
+    height: 850px;
+  }
+  .main_section{
+    width: 1280px;
+    overflow: hidden;
+    margin: 50px auto;
+  }
+  .con_wrap{
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .con_wrap_1{
+    height: 400px;
+  }
+  .con_wrap_2{
+    height: 365px;
+  }
+  .con_wrap_3{
+    height: 280px;
+    flex-wrap: wrap;
+  }
+  .con_wrap_4{
+    height: 215px;
+  }
+  .con_wrap_5{
+    height: 330px;
+  }
+
+  .con_wrap>div{
+    height: 100%;
+    border-radius: 20px;
+  }
+  .new_box_left{
+    width: 850px;
+  }
+  .new_box_right{
+    width: 410px;
+  }
+  .service_box_left,.service_box_right{
+    width: 630px;
+  }
+ 
+  .sec_title{
+    width: 100%;
+    height: 36px;
+  }
+  .con_wrap>.about_area{
+    width: 100%;
+    height: 240px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .img_box{
+    width: 340px;
+    height: 100%;
+    /* 배경이미지로 이미지 삽입하기 */
+    background-image: url(../img/img_about.png);
+    background-size: 100%;
+    /* =>부모객체 가로 100% 맞춤 세로 자동 맞춤 */
+    /* background-size: 100% 100%;
+    =>부모객체 가로 세로 모두 100% 맞춤 */
+    /* background-size: cover;
+    =>부모의 전체 영역에 비율값 맞추고 넘치는 영역은 자름 */
+    /* background-size: contain; */
+    /* =>비율값 맞추기
+    =>공백 또는 반복됨 */
+    /* background-repeat: repeat;
+    =>배경이미지 반복값 기본 */
+   /* background-repeat: no-repeat; */
+     /* =>배경이미지 반복없음 */
+    /* background-repeat: repeat-x;
+    =>가로 반복 */
+  /* background-repeat: repeat-y;
+  =>세로 반복 */
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  }
+  .text_box{
+    width: calc(100% - 340px);
+    background-color: white;
+    padding: 35px 30px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-left: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .in_title{
+
+  }
+  .in_text{
+
+  }
+
+
+
+
+  .info_box{
+    width: 300px;
+  }
+  .webzin_box{
+    width: 270px;
+  }
+  .webzin_box:last-child{
+    width: 410px;
+  }
+
+
+
+
+
+
+
+
+}

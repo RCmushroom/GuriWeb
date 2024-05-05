@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./css/index.css" type="text/css" rel="stylesheet">
+  <!-- =>pc와 mo 영역의 공통 스타일 지정 -->
+  <link href="./css/pc.css" type="text/css" rel="stylesheet">
+  <!-- =>pc화면 해상도가 1280 이상 화면일때 보여지는 스타일 지정 -->
+  <link href="./css/tab.css" type="text/css" rel="stylesheet">
+  <link href="./css/mo.css" type="text/css" rel="stylesheet">
+<!-- 1280이하 화면일때 모바일 화면으로 보여지는 스타일 -->
+</head>
+<body>
+  <!-- 하나의 body로 반응형 페이지 작업하는 경우
+  =>가로 값에 맞추어 정렬을 변경함
+  =>기본적인 디자인 구조가 동일함
+
+  여러개의 body구조로 반응형 페이지 작업하는 경우
+  pc의 body 구조와 스타일
+  mo에서 탭영역,모바일영역 구분 레이아웃 구조 -->
+<header class="main_header"></header>
+<main class="wrap">
+  <figure class="main_banner"></figure>
+  <section class="main_section">
+    <article class="con_wrap con_wrap_1">
+      <div class="new_box_left"></div>
+      <div class="new_box_right"></div>
+    </article>
+    <article class="con_wrap con_wrap_2">
+      <div class="service_box_left"></div>
+      <div class="service_box_right"></div>
+    </article>
+    <article class="con_wrap con_wrap_3">
+      <h2 class="sec_title">공단소개</h2>
+      <div class="about_area">
+        <div class="img_box">
+          <!-- <img src="./img/img_about.png" alt="이사장 정기석"> -->
+        </div>
+        <div class="text_box">
+          <h4 class="in_title">국민건강보험공단 이사장 정기석입니다.</h4>
+          <div class="in_text">
+            국민건강보험공단 홈페이지를 찾아주신~~~~~<br>
+            국민 여러분~~~~
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="con_wrap con_wrap_4">
+      <div class="info_box"></div>
+      <div class="info_box"></div>
+      <div class="info_box"></div>
+      <div class="info_box"></div>
+    </article>
+    <article class="con_wrap con_wrap_5">
+      <div class="webzin_box"></div>
+      <div class="webzin_box"></div>
+      <div class="webzin_box"></div>
+      <div class="webzin_box"></div>
+    </article>
+  </section>
+</main>
+<footer class="main_footer"></footer>
+<aside class="right_fixed_menu"></aside>
+<div class="top_but_wrap"></div>
+
+
+</body>
+</html>

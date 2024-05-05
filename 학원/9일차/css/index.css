@@ -1,0 +1,52 @@
+/* 공통영역의 스타일
+1.초기화영역 */
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ul,li{
+  list-style: none;
+}
+
+/* 2.영역 확인용 배경 
+=>실제 페이지의 크기값 확인용이므로
+=>작업 완료되면 삭제해야함 */
+.main_header{
+  background-color: hotpink;
+}
+.wrap{
+  background-color:lightblue;
+}
+.main_footer{
+  background-color: lightgray;
+}
+.right_fixed_menu{
+  background-color: dimgray;
+}
+.top_but_wrap{
+  background-color: red;
+}
+.main_banner{
+  background-color: mediumaquamarine;
+}
+.main_section{
+  background-color: lightgreen;
+}
+.con_wrap{
+  background-color: salmon;
+}
+.con_wrap>div{
+  background-color: slateblue;
+}
+.sec_title{
+  background-color: lemonchiffon;
+}

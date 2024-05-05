@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .out_box{
+      width: 500px;
+      height: 500px;
+      border: 10px solid black;
+      margin: 50px auto;
+      display: flex;
+      /* =>부모영역에 자식영역이 자동 가로 맞춤 처리 */
+      /* flex-wrap: nowrap;
+      =>가로 한줄로만 자식객체를 인식함
+      =>자식이 부모보다 크면 자동 가로 크기 맞춤처리 */
+      /* flex-wrap: wrap; */
+      /* =>여러줄 인식
+      =>부모영역 보다 가로 크기가 큰 자식객체는 자동 줄바꿈 */
+      /* flex-wrap: wrap-reverse;
+      =>여러줄 인식
+      =>부모영역의 아랫쪽을 기준으로 세로 정렬됨 */
+      align-items: center;
+      /* =>가로 한줄 인식에서 세로 정렬
+      align-items: center 세로 중앙
+      align-items: start 세로 위쪽
+      align-items: end 세로 아래쪽
+      */
+    }
+    .in_box{
+      width: 50%;
+      /* =>기본 부모 객체에 여백값 없이 전체 가로 정렬 */
+      /* margin: 10px 20px; */
+      /* =>가로 100% 지정후 여백값 자율 지정 가능
+      =>부모영역 안쪽에서 가로 정렬 유지 */
+      height: 50%;
+      background-color: aqua;
+      border: 5px solid red;
+      font-size: 100px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="out_box">
+    <div class="in_box">1</div>
+    <div class="in_box">2</div>
+    <div class="in_box">3</div>
+    <div class="in_box">4</div>
+  </div>
+</body>
+</html>l

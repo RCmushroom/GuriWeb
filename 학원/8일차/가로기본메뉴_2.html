@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 1.기본 설정 여백 없애기 */
+*{
+  margin: 0;
+  padding: 0;
+}
+    /* 2.ul,li의 리스트 스타일 없애기 */
+ul,li{
+  list-style: none;
+}
+    /* 3.a태그의 텍스트 검정, 밑줄 없애기 */
+a{
+  /* 텍스트의 색상값 부모객체에서 속성 상속 안됨 */
+  color: black;
+  text-decoration: none;
+}
+
+    /* 4.menu의 스타일
+    =>가로 세로 1000*100
+    =>테두리로 영역 확인 */
+.menu{
+  width: 1000px;
+  height: 100px;
+  border: 10px solid black;
+  display: flex;
+  /* =>자식영역의 가로설정값 */
+}
+    /* 5.top_menu 스타일
+    =>가로 부모의 25% 세로 부모에 맞춤
+    =>텍스트 가로 세로 중앙 정렬
+    =>가로 정렬 */
+.top_menu{
+  /* 자식에게 부모의 크기는 무조건 100% */
+  width: 25%;
+  height: 100%;
+  /* float: left;
+  =>가로 정렬 되는 객체에 삽입 */
+  text-align: center;
+  line-height: 100px;
+  transition-duration: 0.5s;
+}
+    /* 6.sub_menu 스타일
+    =>가로 부모의 100% 세로 150
+    =>배경색 */
+    .sub_menu{
+      width: 100%;
+      height: 0;
+      /* =>부모의 높이값이 0이라도 자식은 보여짐 */
+      overflow: hidden;
+      /* =>높이값이 있는 부모에게 overflow: hidden 지정시
+      넘치는 자식을 자르기  */
+      background-color: lightblue;
+      transition-duration: 0.5s;
+    }
+
+    /* 7.in_sub 스타일
+    =>가로 부모와 동일 세로 50
+    =>텍스트 세로 중앙 */
+  .in_sub{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 5px solid red;
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+  }
+    /* 8.sub_menu의 높이값 활용으로 in_sub를 보이지 않게 설정
+    =>height:0
+    =>overflow: hidden */
+
+    /* 9.top_menu에 hover 하면 
+    =>배경색 변경
+    =>텍스트 색상 변경
+    =>텍스트 크기값 크고 굵게
+    =>sub_menu의 높이값 조절되어 보이게 설정
+    =>시간값 0.5s */
+.top_menu:hover{
+  background-color: yellow;
+  /* color: navy; */
+  /* font-size: 24px;
+  font-weight: 900; */
+  /* =>a태그에 텍스트 색상을 제외
+  =>자식객체에게 부모의 텍스트 속성은 모두 상속됨 */
+}
+.top_menu:hover>a{
+  color: navy;
+  /* a태그는 부모의 텍스트 색상값을 상속받지 않음 */
+  font-size: 24px;
+  font-weight: 900;
+}
+.top_menu:hover .sub_menu{
+  height: 150px;
+}
+.in_sub:hover{
+  background-color: salmon;
+  font-size: 18px;
+  font-weight: 600;
+}
+.in_sub:hover>a{
+  color: red;
+}
+
+
+    /* 10.in_sub에 hover 하면
+    =>배경색 변경
+    =>텍스트 색상 변경
+    =>텍스트 크기값 크고 굵게
+    =>시간값 0.5s */
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <div class="top_menu">
+      <a href="#">상위메뉴1</a>
+      <ul class="sub_menu">
+        <li class="in_sub">
+          <a href="#">하위메뉴1</a>
+        </li>
+        <li class="in_sub">
+          <a href="#">하위메뉴2</a>
+        </li>
+        <li class="in_sub">
+          <a href="#">하위메뉴3</a>
+        </li>
+      </ul>
+    </div>
+    <div class="top_menu">
+      <a href="#">상위메뉴2</a>
+      <ul class="sub_menu">
+        <li class="in_sub">
+          <a href="#">하위메뉴1</a>
+        </li>
+        <li class="in_sub">
+          <a href="#">하위메뉴2</a>
+        </li>
+        <li class="in_sub">
+          <a href="#">하위메뉴3</a>
+        </li>
+      </ul>
+    </div>
+    <div class="top_menu">
+      <a href="#">상위메뉴3</a>
+      <ul class="sub_menu">
+        <li class="in_sub">
+          <a href="#">하위메뉴1</a>
+        </li>
+        <li class="in_sub">
+          <a href="#">하위메뉴2</a>
+        </li>
+        <li class="in_sub">
+          <a href="#">하위메뉴3</a>
+        </li>
+      </ul>
+    </div>
+    <div class="top_menu">
+      <a href="#">상위메뉴4</a>
+      <ul class="sub_menu">
+        <li class="in_sub">
+          <a href="#">하위메뉴1</a>
+        </li>
+        <li class="in_sub">
+          <a href="#">하위메뉴2</a>
+        </li>
+        <li class="in_sub">
+          <a href="#">하위메뉴3</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

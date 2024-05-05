@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    
+    .menu{
+      width: 800px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      margin: 50px auto;
+      border: 10px solid black;
+      /* 2.flex값 사용
+      =>자동으로 자식객체의 가로크기값이
+      부모영역 안쪽으로 맞춤 처리가 되므로
+      =>텍스트의 갯수가 달라도 일정 여백을 유지할수 있음
+      */
+      display: flex;
+      justify-content: space-between;
+    }
+    .top_menu{
+      /* 1.float값 사용
+      =>고정 크기값 안에서 텍스트의 갯수값에 따라
+      여백이 달라짐
+      =>부모영역의 크기값에 맞추어 자식객체의 크기 설정함 */
+      /* float: left; */
+      /* width: 200px; */
+      width: 100%;
+      padding: 0 35px;
+      height: 100%;
+      background-color: lawngreen;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    /* 마우스 오버 선택자 
+    객체:hover{}
+    =>객체에 마우스를 올리면 스타일 변경
+    =>마우스가 객체에서 나오면 기존 스타일로 자동 변경
+    */
+    .top_menu:hover{
+      background-color: aqua;
+    }
+
+/* 서브 메뉴 기능 */
+/* 1.display값 활용
+=>태그 형식지정 속성
+=>태그 형식이 없으면 태그 자체가 인식되지 않음 */
+.sub_menu{
+  width: 100%;
+  height: 240px;
+  background-color: darksalmon;
+  /* 보이지 않게 설정
+  =>display: none
+  =>태그 형식 없음 처리됨 */
+  display: none;
+}
+.in_sub{
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+}
+
+.top_menu:hover > .sub_menu{
+  display: block;
+}
+
+.in_sub:hover{
+  background-color: lightgreen;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <h1>기본 가로메뉴</h1>
+
+  <div class="menu">
+    <div class="top_menu">
+      <a href="#">메뉴1456</a>
+    </div>
+    <div class="top_menu">
+      <a href="#">메뉴25467890</a>
+    </div>
+    <div class="top_menu">
+      <a href="#">메뉴345678980900</a>
+    </div>
+    <div class="top_menu">
+      <a href="#">메뉴412345677777777777</a>
+    </div>
+  </div>
+
+
+<h1>기본 가로메뉴 + 하위 메뉴 display 값 활용</h1>
+  <div class="menu">
+    <div class="top_menu">
+      <a href="#">상위메뉴1</a>
+      <div class="sub_menu">
+        <div class="in_sub">
+          <a href="#">하위메뉴1</a>
+        </div>
+        <div class="in_sub">
+          <a href="#">하위메뉴2</a>
+        </div>
+        <div class="in_sub">
+          <a href="#">하위메뉴3</a>
+        </div>
+      </div>
+    </div>
+    <div class="top_menu">
+      <a href="#">상위메뉴2</a>
+      <div class="sub_menu">
+        <div class="in_sub">
+          <a href="#">하위메뉴1</a>
+        </div>
+        <div class="in_sub">
+          <a href="#">하위메뉴2</a>
+        </div>
+        <div class="in_sub">
+          <a href="#">하위메뉴3</a>
+        </div>
+      </div>
+    </div>
+    <div class="top_menu">
+      <a href="#">상위메뉴3</a>
+      <div class="sub_menu">
+        <div class="in_sub">
+          <a href="#">하위메뉴1</a>
+        </div>
+        <div class="in_sub">
+          <a href="#">하위메뉴2</a>
+        </div>
+        <div class="in_sub">
+          <a href="#">하위메뉴3</a>
+        </div>
+      </div>
+    </div>
+    <div class="top_menu">
+      <a href="#">상위메뉴4</a>
+      <div class="sub_menu">
+        <div class="in_sub">
+          <a href="#">하위메뉴1</a>
+        </div>
+        <div class="in_sub">
+          <a href="#">하위메뉴2</a>
+        </div>
+        <div class="in_sub">
+          <a href="#">하위메뉴3</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

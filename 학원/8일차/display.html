@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .block_box{
+      background-color: aqua;
+      width: 300px;
+      height: 200px;
+      margin: 0;
+      /* display: inline; */
+      /* =>태그 형식을 지정하는 속성 */
+      /* display: inline-block; */
+    }
+/* 블럭형식
+=>기본 세로 정렬
+=>기본 설정된 여백이 있음(태그마다 차이 있음)
+=>여백값 초기화로 여백 제거 가능함
+=>가로 세로 크기값 인식함 */
+
+
+
+    .inline_box{
+      background-color: yellow;
+      width: 300px;
+      height: 200px;
+      /* margin: 0; */
+      /* float: left; */
+      /* display: flex; */
+      /* display: block; */
+      /* margin: 200px 100px;
+      =>인라인 형식은 위아래 margin값 설정 안됨 */
+      /* padding: 200px 50px;
+      =>인락인 형식에서 인식함 */
+    }
+/* 인라인형식
+=>기본 가로 정렬
+=>여백값 있음
+=>여백값 초기화로 여백 제거 안됨
+=>가로세로크기값 인식안함
+=>float 값 지정시 
+==> 여백값 제거
+==> 가로 정렬 유지
+==> 가로세로 크기값 인식함
+=>display:flex 지정시 : 블럭형식으로 변경됨
+==> 여백값 제거
+==> 세로 정렬 변경
+==> 가로세로 크기값 인식함
+
+*/
+
+/* 인라인 블럭형식
+=>인라인 형식
+==>가로정렬
+==>기본 여백값
+블럭형식
+==>가로세로 크기값 인식함
+img 태그,input태그
+*/
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <h1>블럭형식</h1>
+  <div class="block_box">1</div>
+  <div class="block_box">2</div>
+  <div class="block_box">3</div>
+
+  <p class="block_box">p_1</p>
+  <p class="block_box">p_2</p>
+  <p class="block_box">p_3</p>
+
+  <h1>인라인형식</h1>
+  <span class="inline_box">1</span>
+  <span class="inline_box">2</span>
+  <span class="inline_box">3</span>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 3개의 객체의 공통 스타일
+    =>가로세로 크기값 300*300
+    =>테두리 안쪽으로 검정색 실선으로 10px
+    =>텍스트 크기 100px
+    =>텍스트 가로세로 중앙 정렬 시키기 */
+
+body{
+  height: 5000px;
+}
+
+
+    .box{
+      width: 300px;
+      height: 300px;
+      border: 10px solid black;
+      box-sizing: border-box;
+      font-size: 100px;
+      text-align: center;
+      line-height: 300px;
+      /* position: relative; */
+      /* =>자신의 기존 위치에서 자신의 왼쪽 상단을 기준으로 함 */
+      /* top:100px;
+      left:100px; */
+      /* position: absolute; */
+      /* =>부모의 왼쪽 상단을 기준 */
+      /* top:0;
+      left: 0; */
+      background-color: aqua;
+      position: fixed;
+      /* =>윈도우의 왼쪽 상단을 기준함
+      =>윈도우의 스크롤시 고정값 */
+    }
+.box_1{
+  top:0;
+  left: 0;
+  /* z-index: 3; */
+}
+.box_2{
+  top:150px;
+  left: 150px;
+  /* z-index: 2; */
+}
+.box_3{
+  top:300px;
+  left:300px;
+  /* z-index: 1; */
+  /* =>레이어순서
+  =>먼저 작성된 객체가 레이어 순서로 가장 아래쪽에 위치함
+  =>z-index는 수가 크면 위쪽 -음수는 가장 밑으로 내려감
+  =>기본 0 -1 밑으로 +값은 위로 올라감
+  =>모든 객체보다 가장 위쪽으로 위치를 설정 99999 9의 갯수로
+  확인함 */
+}
+
+
+
+    /* position속성
+    =>좌표값 
+    =>객체의 왼쪽 상단을 기준으로 함
+    =>자신의 왼쪽 상단을 기준으로 하는 relative
+    =>부모의 왼쪽 상단을 기준으로 하는 absolute
+    =>윈도우(브라우저)의 왼쪽 상단을 기준으로 하는 fixed */
+
+    /* 좌표값
+    =>x축 left,right
+    =>y축 top,bottom
+    =>선택한 위치에서 떨어지면 뱡향값 +
+    =>선택한 위치 쪽으로 가면 방향값 - */
+  </style>
+</head>
+<body>
+  <div class="box box_1">1</div>
+  <div class="box box_2">2</div>
+  <div class="box box_3">3</div>
+</body>
+</html>

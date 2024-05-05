@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 목록 태그 type옵션을 list-style 속성으로 대체 사용함 */
+    ul,ol{
+      /* list-style:decimal; */
+      /* =>ul,ol을 순서가 있는, 순서가 없는 태그에서
+      =>그냥 목록태그의 부모형식으로 사용 가능하게 만들어줌 */
+      /* ul,li태그의 기본 설정되어 있는 타입을
+      list-style: none 으로 초기화 시킨후
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      =>ul,li 구조로 변경하여 작업가능함 */
+      border: 10px solid black;
+      width: 400px;
+      height: 500px;
+    }
+    li{
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      font-size: 50px;
+      background-color: aqua;
+    }
+/* li:nth-child(1){
+  background-color: red;
+} */
+/* 각 부모 안에서 순서값으로 객체를 선택할때
+선택자:nth-child(순서값)
+첫번째 자식 선택자:first-child
+마지막 자식 선택자:last-child */
+
+/* 자식선택자
+부모객체>자식객체 */
+
+ul>li:first-child{
+  background-color: slateblue;
+}
+ol>li:nth-child(2){
+  background-color: blue;
+}
+li:nth-child(3){
+  background-color: yellow;
+}
+li:nth-child(4){
+  background-color: lightcoral;
+}
+/* li:nth-child(5){
+  background-color: darkmagenta;
+} */
+li:last-child{
+  background-color: darkmagenta;
+}
+
+/* 선택객체 뒤에 있는 형제 요소 선택 */
+ul>li:nth-child(2)~li{
+  color: red;
+  font-weight: 900;
+  font-size: 100px;
+}
+/* 선택객체 바로 뒤에 있는 형제요소 선택 */
+ol>li:nth-child(2)+li{
+  color: red;
+  font-weight: 900;
+  font-size: 100px;
+}
+
+
+  </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+  <ol>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ol>
+</body>
+</html>

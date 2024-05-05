@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 400px;
+      height: 200px;
+      border: 10px solid black;
+      margin: 30px;
+      background-color:lightcoral;
+      font-size: 100px;
+    }
+    .box:nth-child(1){
+      /* display: none; */
+      /* =>태그의 형식 없음
+      =>태그 자체를 인식하지 않음
+      =>크기값 없어짐 */
+      transition-duration: 1s;
+    }
+    .box:nth-child(2){
+      /* visibility: hidden; */
+      /* =>보여지는 속성값
+      =>visible 보여짐
+      =>hidden 안보임
+      ==>크기영역은 인식됨
+      */
+      transition-duration: 2s;
+      transition-property: background-color;
+      /* =>all 전체 속성에 시간값 지정(기본)
+      =>속성명 작성시 해당되는 속성에게만 시간값 적용이됨 */
+    }
+    .box:nth-child(3){
+      /* opacity:0; */
+      /* =>불투명속성
+      0~1 사이의 소수점 값으로 지정함
+      0 투명 1 불투명 0.5 반투명 */
+      /* background-color: rgba(255,0,0,0); */
+      /* =>속성의 중간값이 있을때
+      =>변화되는 속성에 시간값을 지정 할 수 있음
+      =>transition속성 */
+      transition-duration: 1s;
+      /* =>시간값 s단위의 초값 사용 */
+      transition-delay: 1s;
+      /* =>시간값 적용 지연값 */
+    }
+    .box:nth-child(3):hover{
+      opacity: 0;
+      /* transition-duration: 1s; */
+    }
+    .box:nth-child(1):hover{
+      background-color: blue;
+    }
+    .box:nth-child(2):hover{
+      height: 500px;
+      background-color: fuchsia;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</body>
+</html>

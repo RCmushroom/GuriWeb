@@ -1,0 +1,12 @@
+/* 1279~961 보여지는 화면
+body 배경색 노랑색 */
+@media all and (max-width:1279px) and (min-width:961px){
+  body{
+    background-color: yellow;
+  }
+
+
+
+
+
+}

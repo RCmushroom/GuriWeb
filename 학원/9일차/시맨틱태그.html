@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <!-- 문서내부에서 가장 위쪽 의미
+    =>로고,메뉴영역의 부모객체로 사용함
+    =>단독사용, 자식요소 사용하기도 함
+    =>한페이지 내에서 한번 사용함 -->
+    <h1>로고 영역</h1>
+    <nav>
+      링크가 걸리는 영역의 부모객체로 사용함
+      =>단독 사용, 자식요소로 사용 가능함
+    </nav>
+  </header>
+  <main>
+    =>주 내용의 부모객체로 사용
+    =>단독 사용, 가장 큰 부모 역활
+    =>한페이지 내에서 한번 사용함
+    <section>
+      =>내용 구분 부모 객체로 사용함
+      =>단독 사용, main태그 안에서 내용 구분시 사용
+      <article>
+        =>내용 구분 부모객체로 사용함
+        =>단독 사용,section의 자식요소 사용
+      </article>
+      <figure>
+        =>내용 구분시 사용
+        =>동적 내용 삽입시 사용함
+      </figure>
+    </section>
+    <aside>
+      부수적인 내용을 구분할때 사용함
+    </aside>
+  </main>
+  <footer>
+    가장 아래쪽 내용
+    =>페이지 내에서 한번 사용함
+    =>페이지의 정보가 담겨 있는 영역
+    =>자식요소로 사용가능, 단독사용함
+    <address>회사 정보</address>
+  </footer>
+</body>
+</html>
